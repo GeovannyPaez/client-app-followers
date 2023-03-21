@@ -13,6 +13,7 @@ export const Searcher = ({onChange,inputValue,onSearch}) => {
           }}
           onChange={onChange}
           type="search"
+          autoFocus
           autoComplete="off"
           label="Nombre o Email"
           id="outlined-basic"

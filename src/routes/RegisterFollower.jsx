@@ -92,6 +92,7 @@ export function RegisterFollower() {
             name="name"
             label="Nombre"
             id="name"
+            autoFocus
           />
           <TextField
             margin="normal"
@@ -104,9 +105,9 @@ export function RegisterFollower() {
             helperText={"debe ser formato email [use@mail.co]"}
             name="email"
             type="email"
-            error={!isValidateEmail}
+            error={!isValidateEmail && valueInputEmail.length >0?true:false}
             autoComplete="email"
-            autoFocus
+       
           />
           <TextField
             margin="normal"

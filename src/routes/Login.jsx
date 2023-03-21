@@ -66,7 +66,7 @@ export function Login() {
           <TextField
             margin="normal"
             required
-            error={!isValidateEmail}
+            error={!isValidateEmail && valueEmail.length > 0 ? true:false }
             value={valueEmail}
             onChange={onChangeEmail}
             fullWidth
@@ -85,11 +85,12 @@ export function Login() {
             fullWidth
             name="password"s
             label="Contraseña"
-            error={!isValidadePassword}
+            error={!isValidadePassword && valuePassword.length > 0 ?true:false}
             type="password"
             value={valuePassword}
             onChange={onChangePassword}
             id="password"
+            helperText='minimo de caracteres son 6'
             autoComplete="current-password"
           />
           {stateForm.error && <Alert severity="error">email o contraseña incorrecta</Alert>}
